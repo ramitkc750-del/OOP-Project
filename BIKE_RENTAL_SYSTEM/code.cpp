@@ -1,0 +1,94 @@
+#include <iostream>   
+#include <string>       
+#include <fstream>      // For saving information in a file
+
+using namespace std;
+
+// ============================
+//        BIKE CLASS
+// ============================
+
+class Bike
+{
+public:
+
+    string name;        // Name of the bike
+    int price;          // Price per hour
+    bool rented;        // Tells us if bike is rented
+
+    // Gives information to the bike
+    Bike(string n, int p)
+    {
+        name = n;
+        price = p;
+        rented = false;     // Bike starts as available
+    }
+};
+
+// ============================
+//          MAIN
+// ============================
+
+int main()
+{
+    // Creating 4 bikes
+
+    Bike bike1("Ducati Panigale V4", 130);
+    Bike bike2("Kawasaki Ninja ZX-10RR", 150);
+    Bike bike3("Harley Davidson Sportster S", 90);
+    Bike bike4("Yamaha YZF-R9 SP", 100);
+
+    int choice;
+    int bike;
+    int hours;
+    int money;
+
+    // Keep showing the menu
+    while (true)
+    {
+        cout << "\n===== BIKE RENTAL SYSTEM =====\n";
+
+        cout << "1. Display Bikes\n";
+        cout << "2. Rent Bike\n";
+        cout << "3. Return Bike\n";
+        cout << "4. Show Rent Income\n";
+        cout << "5. Exit\n";
+
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        // ============================
+        //       SHOW BIKES
+        // ============================
+
+        if (choice == 1)
+        {
+            cout << "\n1. " << bike1.name;
+            cout << " - $" << bike1.price << endl;
+
+            cout << "2. " << bike2.name;
+            cout << " - $" << bike2.price << endl;
+
+            cout << "3. " << bike3.name;
+            cout << " - $" << bike3.price << endl;
+
+            cout << "4. " << bike4.name;
+            cout << " - $" << bike4.price << endl;
+        }
+
+        // ============================
+        //        RENT BIKE
+        // ============================
+
+        else if (choice == 2)
+        {
+            cout << "Enter bike number (1-4): ";
+            cin >> bike;
+
+            cout << "Enter needed hours: ";
+            cin >> hours;
+        }}
+
+        return 0;
+    }
+    
