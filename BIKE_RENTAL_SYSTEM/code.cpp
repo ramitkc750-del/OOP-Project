@@ -115,8 +115,95 @@ int main()
                     cout << "Bike is already rented." << endl;
                 }
             }
+
+            // Bike 2
+            else if (bike == 2)
+            {
+                if (bike2.rented == false)
+                {
+                    money = bike2.price * hours;
+
+                    bike2.rented = true;
+
+                    cout << "Bike rented!" << endl;
+                    cout << "Total: $" << money << endl;
+
+                    ofstream file("rental.txt", ios::app);
+
+                    file << bike2.name << endl;
+                    file << "Hours: " << hours << endl;
+                    file << "Total: $" << money << endl;
+                    file << "----------------" << endl;
+
+                    file.close();
+                }
+                else
+                {
+                    cout << "Bike is already rented." << endl;
+                }
+            }
+
+            // Bike 3
+            else if (bike == 3)
+            {
+                if (bike3.rented == false)
+                {
+                    money = bike3.price * hours;
+
+                    bike3.rented = true;
+
+                    cout << "Bike rented!" << endl;
+                    cout << "Total: $" << money << endl;
+
+                    ofstream file("rental.txt", ios::app);
+
+                    file << bike3.name << endl;
+                    file << "Hours: " << hours << endl;
+                    file << "Total: $" << money << endl;
+                    file << "----------------" << endl;
+
+                    file.close();
+                }
+                else
+                {
+                    cout << "Bike is already rented." << endl;
+                }
+            }
+
+            // Bike 4
+            else if (bike == 4)
+            {
+                if (bike4.rented == false)
+                {
+                    money = bike4.price * hours;
+
+                    bike4.rented = true;
+
+                    cout << "Bike rented!" << endl;
+                    cout << "Total: $" << money << endl;
+
+                    ofstream file("rental.txt", ios::app);
+
+                    file << bike4.name << endl;
+                    file << "Hours: " << hours << endl;
+                    file << "Total: $" << money << endl;
+                    file << "----------------" << endl;
+
+                    file.close();
+                }
+                else
+                {
+                    cout << "Bike is already rented." << endl;
+                }
+            }
+
+            else
+            {
+                cout << "Wrong bike number." << endl;
+            }
         }
     }
 
-    return 0;
+
+return 0; 
 }
