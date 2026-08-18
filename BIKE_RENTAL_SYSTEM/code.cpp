@@ -87,8 +87,36 @@ int main()
 
             cout << "Enter needed hours: ";
             cin >> hours;
-        }}
 
-        return 0;
+            // Bike 1
+            if (bike == 1)
+            {
+                if (bike1.rented == false)
+                {
+                    money = bike1.price * hours;
+
+                    bike1.rented = true;
+
+                    cout << "Bike rented!" << endl;
+                    cout << "Total: $" << money << endl;
+
+                    // Save information to file
+                    ofstream file("rental.txt", ios::app);
+
+                    file << bike1.name << endl;
+                    file << "Hours: " << hours << endl;
+                    file << "Total: $" << money << endl;
+                    file << "----------------" << endl;
+
+                    file.close();
+                }
+                else
+                {
+                    cout << "Bike is already rented." << endl;
+                }
+            }
+        }
     }
-    
+
+    return 0;
+}
