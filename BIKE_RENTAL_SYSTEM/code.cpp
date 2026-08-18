@@ -202,8 +202,73 @@ int main()
                 cout << "Wrong bike number." << endl;
             }
         }
+
+        // ============================
+        //       RETURN BIKE
+        // ============================
+
+        else if (choice == 3)
+        {
+            cout << "Enter bike number: ";
+            cin >> bike;
+
+            if (bike == 1)
+            {
+                bike1.rented = false;
+                cout << "Bike returned." << endl;
+            }
+
+            else if (bike == 2)
+            {
+                bike2.rented = false;
+                cout << "Bike returned." << endl;
+            }
+
+            else if (bike == 3)
+            {
+                bike3.rented = false;
+                cout << "Bike returned." << endl;
+            }
+
+            else if (bike == 4)
+            {
+                bike4.rented = false;
+                cout << "Bike returned." << endl;
+            }
+
+            else
+            {
+                cout << "Wrong bike number." << endl;
+            }
+        }
+
+        // ============================
+        //       SHOW EARNINGS
+        // ============================
+
+        else if (choice == 4)
+        {
+            cout << "Earnings are saved in rental.txt" << endl;
+        }
+
+        // ============================
+        //            EXIT
+        // ============================
+
+        else if (choice == 5)
+        {
+            cout << "Thank you!" << endl;
+
+            break;
+        }
+
+        else
+        {
+            cout << "Wrong choice." << endl;
+        }
     }
 
-
-return 0; 
+    return 0;
 }
+
+
